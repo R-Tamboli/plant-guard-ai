@@ -1,0 +1,182 @@
+.dashboard {
+  padding-top: calc(var(--navbar-height) + var(--space-8));
+  padding-bottom: var(--space-16);
+  min-height: 100vh;
+}
+
+.dash-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-12);
+}
+
+.dash-stat-card {
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.dash-stat-icon {
+  font-size: 2rem;
+  margin-bottom: var(--space-3);
+}
+
+.dash-stat-value {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 900;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dash-stat-label {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin-top: var(--space-1);
+}
+
+/* Charts */
+.dash-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-12);
+}
+
+.dash-chart-card {
+  padding: var(--space-6);
+}
+
+.dash-chart-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.dash-chart-container {
+  position: relative;
+  height: 280px;
+}
+
+/* SDG Impact */
+.dash-sdg-section {
+  margin-bottom: var(--space-12);
+}
+
+.dash-sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.dash-sdg-card {
+  padding: var(--space-6);
+  display: flex;
+  gap: var(--space-5);
+}
+
+.dash-sdg-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.dash-sdg-content {
+  flex: 1;
+}
+
+.dash-sdg-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+}
+
+.dash-sdg-target {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}
+
+.dash-sdg-progress {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: var(--space-2);
+}
+
+.dash-sdg-progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1.5s ease;
+}
+
+.dash-sdg-progress-label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Disease Table */
+.dash-disease-section {
+  margin-bottom: var(--space-12);
+}
+
+.dash-table-card {
+  padding: var(--space-6);
+  overflow-x: auto;
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dash-table th {
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  border-bottom: var(--border-glass);
+}
+
+.dash-table td {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-sm);
+  border-bottom: var(--border-glass);
+}
+
+.dash-table tr:last-child td {
+  border-bottom: none;
+}
+
+.dash-table tr:hover td {
+  background: var(--color-bg-glass);
+}
+
+@media (max-width: 768px) {
+  .dash-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dash-charts {
+    grid-template-columns: 1fr;
+  }
+  .dash-sdg-grid {
+    grid-template-columns: 1fr;
+  }
+}
