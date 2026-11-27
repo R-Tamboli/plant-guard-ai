@@ -9,6 +9,7 @@ app.set('trust proxy', 1);
 
 app.use(cors({
   origin: [
+    'https://plant-guard-ai-1.onrender.com',
     'https://agri-guard-ai-k41d.onrender.com',
     'http://localhost:5173',
     'http://localhost:5174'
